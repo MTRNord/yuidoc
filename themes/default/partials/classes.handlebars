@@ -158,6 +158,16 @@
                     </ul>
                 </div>
             {{/if}}
+            
+             {{#if todo}}
+                <div class="index-section todo">
+                    <h3>Todo</h3>
+                    {{#todo}}
+{{>todo}}
+                    {{/todo}}
+                    
+                </div>
+            {{/if}}
         </div>
 
         {{#if methods}}
@@ -197,6 +207,16 @@
                 {{#events}}
                     {{>events}}
                 {{/events}}
+            </div>
+        {{/if}}
+        
+        {{#if todo}}
+            <div id="todo" class="api-class-tabpanel">
+                <h2 class="off-left">Todo</h2>
+
+                {{#todo}}
+                    {{>todo}}
+                {{/todo}}
             </div>
         {{/if}}
     </div>
